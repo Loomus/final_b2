@@ -1,0 +1,10 @@
+<h2><%= @student.name %>'s Show Page</h2>
+  <h4>Name: <%= @student.name %></h4>
+  <h4>Courses Enrolled In:</h4>
+  <% @student.courses.each do |course| %>
+    <%= course.name %><br></br>
+  <% end %>
+  <h4>Grades:</h4>
+  <% @student.student_courses.each do |sc| %>
+    <%= sc.grade %><br></br>
+  <% end %>
