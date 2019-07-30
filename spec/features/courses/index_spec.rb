@@ -20,13 +20,6 @@ RSpec.describe 'Course Index Page' do
       expect(page).to have_content("#{@course_1.name}")
       expect(page).to have_content("#{@course_2.name}")
       expect(page).to have_content("#{@course_3.name}")
-      
     end
   end
 end
-
-# As a user,
-# When I visit a course index page,
-# Then I see each course in the system including:
-# - the course's name
-# - each student in the course listed in order from highest grade to lowest grade

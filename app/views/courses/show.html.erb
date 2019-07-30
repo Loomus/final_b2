@@ -1,0 +1,7 @@
+<h2><%= @course.name %> Show Page</h2>
+<p>Students by Grade: </p>
+<% @course.students_by_grade.each do |student| %>
+  <section id='student-<%= student.id %>'>
+    <p><%= student.name %> <%= link_to 'Unenroll', "/courses/#{@course.id}/student/#{student.id}", method: :patch %> </p>
+  </section>
+<% end %>
